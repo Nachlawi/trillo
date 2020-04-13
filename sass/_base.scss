@@ -1,0 +1,97 @@
+/*
+COLORS
+
+Primary: #eb452f
+Primary light: #fa4932
+Primary dark: #cc1800
+
+Grey light 1: #faf9f9
+Grey light 2: #f4f2f2
+Grey light 3: #f0eeee
+Grey light 4: #ccc
+
+Grey dark 1: #333
+Grey dark 2: #777
+Grey dark 3: #999
+
+*/
+
+:root {
+  // FONT
+  --default-font-size: 1.6rem;
+
+
+  // COLORS
+  --color-primary: #eb452f;
+  --color-primary-light: #fa4932;
+  --color-primary-dark: #cc1800;
+
+  --color-secondary-light: #ffb900;
+  --color-secondary-dark: #ff7730;
+
+  --color-tertiary-light: #2998ff;
+  --color-tertiary-dark: #5643fa;
+
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+
+  --color-light: #fff;
+  --color-dark: #000;
+
+
+  //SHADOWS
+  --shadow-dark: 0 3rem 6rem rgba(0,0,0, .3);
+  --shadow-light: 0 3rem 6rem rgba(0,0,0, .06);
+
+  //BORDERS
+  --border-light: 1px solid var(--color-grey-light-2);
+}
+
+//BREAKPOINTS
+$bp-largest: 75em;   //1200px
+$bp-large: 68.75em;  //1100px
+$bp-medium: 56.25em;  //900px
+$bp-small: 37.5em;    //600px
+$bp-smallest: 31.25em;//500px
+
+*, 
+*::after, 
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 62.5%; // 10rem = 10px, 10px/16px = 62.5%
+
+  @media only screen and (max-width:$bp-large) {
+    font-size: 50%; // 10rem = 8px, 8px/16px = 50%
+  }
+}
+
+body {
+  background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Open Sans', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+  color: var(--color-grey-dark-2);
+  font-size: 1.6rem;
+  line-height: 1.6;
+
+  padding-bottom: 1px; // Firefox requires this so the bottom margin is accounted for
+  @media only screen and (max-width:$bp-largest) {
+     padding-bottom: 0;
+  }
+
+  min-height: 100vh;
+}
